@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "chart.js": "^4.5.1",
+    "pinia": "^3.0.3",
+    "vue-chartjs": "^5.3.3",
+    "vue-router": "^4.5.1"
+  },
+  "devDependencies": {
+    "@vue/test-utils": "^2.4.6",
+    "cypress": "^15.0.0",
+    "jsdom": "^27.3.0",
+    "vitest": "^4.0.16"
+  }
+}

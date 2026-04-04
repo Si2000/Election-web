@@ -1,0 +1,247 @@
+/* === ACCOUNT PAGINA STYLING === */
+
+.account-page-wrapper {
+  max-width: 1000px; /* Breed, maar comfortabel om te lezen */
+  margin: 40px auto; /* Iets minder marge bovenin */
+  padding: 0 20px;
+  font-family: 'Inter', sans-serif;
+  color: #333;
+  box-sizing: border-box;
+}
+
+.page-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #001b5e;
+  margin-bottom: 30px; /* Iets dichter op de content */
+  text-align: center;
+  letter-spacing: -0.5px;
+}
+
+.account-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 0; /* Geen gat tussen tabs en content, ze sluiten aan */
+}
+
+/* --- TAB BAR STYLING (Bovenkant) --- */
+.tab-bar-container {
+  /* Zorgt dat de balk even breed is als de content */
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.tab-bar {
+  display: flex;
+  width: 100%;
+  background-color: #f8f9fa;
+  padding: 4px;
+  border-radius: 12px;
+  gap: 4px;
+  /* Zorgt dat de tabs de hele breedte verdelen */
+  justify-content: space-between;
+}
+
+.tab-bar button {
+  flex: 1; /* Elke knop pakt evenveel ruimte */
+  background: transparent;
+  border: none;
+  padding: 12px 16px;
+  font-size: 0.95rem;
+  color: #6c757d;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Tekst en icoon centreren */
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.tab-bar button:hover {
+  color: #001b5e;
+  background-color: rgba(0, 27, 94, 0.05);
+}
+
+.tab-bar button.active {
+  background-color: #ffffff;
+  color: #001b5e;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.tab-bar button.danger-tab.active {
+  color: #dc3545;
+}
+
+.icon {
+  font-size: 1.1rem;
+}
+
+/* --- CONTENT AREA --- */
+.account-content {
+  background: #fff;
+  border: 1px solid #eaecf0;
+  border-radius: 16px;
+  padding: 40px; /* Compacter dan voorheen (was 60px) */
+  box-shadow: 0 4px 20px rgba(0, 27, 94, 0.03);
+  min-height: 300px; /* Minder hoog, zodat je niet onnodig hoeft te scrollen */
+}
+
+.section-header {
+  margin-bottom: 30px;
+  text-align: left; /* Links uitlijnen voor een strakkere look */
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 15px;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: #001b5e;
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+.subtitle {
+  color: #667085;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* --- FORMULIEREN --- */
+.settings-form {
+  width: 100%; /* Gebruik de volledige breedte van de content area */
+  max-width: 100%; /* Geen beperking meer */
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #344054;
+  font-size: 0.9rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px 14px; /* Iets compacter */
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+  box-sizing: border-box;
+  background-color: #fff;
+  color: #101828;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #001b5e;
+  box-shadow: 0 0 0 3px rgba(0, 27, 94, 0.1);
+}
+
+.form-actions {
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-end; /* Knop rechts uitlijnen, professioneler */
+}
+
+.btn-save {
+  background-color: #001b5e;
+  color: white;
+  border: none;
+  padding: 10px 32px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-save:hover {
+  background-color: #002c9b;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 27, 94, 0.15);
+}
+
+/* --- GEVARENZONE --- */
+.danger-text { color: #d92d20; }
+
+.danger-box {
+  border: 1px solid #fecdca;
+  background-color: #fef3f2;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn-delete {
+  background-color: #d92d20;
+  color: white;
+  border: 1px solid #d92d20;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.2s;
+}
+
+.btn-delete:hover {
+  background-color: #b42318;
+  border-color: #b42318;
+}
+
+/* --- ALERTS --- */
+.alert {
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+}
+.success { background-color: #ecfdf3; color: #027a48; border: 1px solid #d1fadf; }
+.error { background-color: #fef3f2; color: #b42318; border: 1px solid #fecdca; }
+
+/* --- ANIMATIE --- */
+.animate-fade {
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .account-page-wrapper {
+    padding: 0 16px;
+    margin: 20px auto;
+  }
+
+  .account-content {
+    padding: 24px;
+  }
+
+  .tab-bar {
+    flex-direction: column; /* Op mobiel onder elkaar */
+  }
+
+  .form-actions {
+    justify-content: stretch; /* Op mobiel knop breed */
+  }
+
+  .btn-save {
+    width: 100%;
+  }
+}

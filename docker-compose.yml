@@ -1,0 +1,22 @@
+version: "3.9"
+
+services:
+  backend:
+    build:
+      context: ./backend-java
+      dockerfile: Dockerfile
+    container_name: election-backend
+    ports:
+      - "8081:8081"
+    restart: always
+
+  frontend:
+    build:
+      context: ./frontend-Vue
+      dockerfile: Dockerfile
+    container_name: election-frontend
+    ports:
+      - "5173:5173"
+    restart: always
+    depends_on:
+      - backend

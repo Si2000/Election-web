@@ -1,0 +1,196 @@
+/* candidates.css */
+
+/* Container van de kandidatenlijst */
+.candidates-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 20px;
+  justify-content: space-evenly; /* zorgt dat kaartjes mooi verdeeld zijn */
+}
+
+/* Elke kandidaat als kaartje */
+.candidate-card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  padding: 16px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  /* breedte als percentage zodat het altijd netjes past */
+  flex: 1 1 calc(20% - 16px); /* 5 kaartjes per rij op brede schermen */
+  max-width: 280px;           /* kaartjes niet te groot maken */
+  box-sizing: border-box;
+}
+
+.candidate-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Naam en initiëlen */
+.candidate-name {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+}
+
+/* Info rij */
+.candidate-info {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* Status- en foutberichten */
+.status-message {
+  color: #007bff;
+  font-weight: 500;
+  margin-top: 10px;
+}
+.error-message {
+  color: #ff4d4f;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+/* Responsive: op kleinere schermen minder per rij */
+@media (max-width: 1200px) {
+  .candidate-card {
+    flex: 1 1 calc(25% - 16px); /* 4 per rij */
+  }
+}
+
+@media (max-width: 992px) {
+  .candidate-card {
+    flex: 1 1 calc(33.33% - 16px); /* 3 per rij */
+  }
+}
+
+@media (max-width: 768px) {
+  .candidate-card {
+    flex: 1 1 calc(50% - 16px); /* 2 per rij */
+  }
+}
+
+@media (max-width: 480px) {
+  .candidate-card {
+    flex: 1 1 100%; /* 1 per rij op mobiel */
+  }
+}
+
+
+/* =================================== */
+/* === NIEUW: Filter Styling === */
+/* =================================== */
+
+/* De container voor alle filters */
+.filters-container {
+  display: flex;
+  flex-wrap: wrap; /* Zorgt dat filters onder elkaar springen op kleine schermen */
+  gap: 1.5rem; /* Ruimte tussen de filter-blokjes */
+
+  padding: 1.5rem;
+  margin-bottom: 24px; /* Ruimte boven de kandidatenlijst */
+
+  background-color: #2c3e50;
+  border: 1px solid #e0e0e0; /* Matcht de navbar border */
+  border-radius: 12px; /* Matcht de auth container */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Matcht de auth container */
+}
+
+/* Elk filter-blokje (de div rond label en select) */
+.filters-container > div {
+  flex-grow: 1; /* Laat blokjes meegroeien */
+  flex-basis: 200px; /* Zorgt dat ze een basisbreedte hebben */
+  min-width: 200px; /* Zorgt dat ze niet te smal worden */
+}
+
+/* Styling voor de labels */
+.filters-container label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #2c3e50; /* Matcht navbar tekst */
+  margin-bottom: 0.5rem;
+}
+
+/* Styling voor de select-dropdowns */
+.filters-container select {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  font-size: 0.95rem;
+
+  border: 1px solid #ddd; /* Matcht auth input */
+  border-radius: 8px; /* Matcht auth input */
+
+  background-color: #fff;
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+  /* Voegt een subtiel pijltje toe */
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1em;
+  padding-right: 2.5rem; /* Ruimte voor het pijltje */
+}
+
+/* Focus state voor de dropdown */
+.filters-container select:focus {
+  outline: none;
+  border-color: #001b5e; /* Matcht de primaire kleur */
+  box-shadow: 0 0 0 3px rgba(0, 27, 94, 0.1); /* Zachte gloed */
+}
+
+/* Styling voor disabled state (wanneer partijen nog laden) */
+.filters-container select:disabled {
+  background-color: #f5f6fa; /* Matcht auth inactive tab */
+  cursor: not-allowed;
+  color: #999;
+}
+
+/*!* Info badges *!*/
+/*.candidate-badge {*/
+/*  display: inline-block;*/
+/*  background-color: #f0f4ff;*/
+/*  color: #007bff;*/
+/*  border-radius: 12px;*/
+/*  padding: 2px 8px;*/
+/*  font-size: 0.85rem;*/
+/*  margin-right: 6px;*/
+/*  margin-top: 4px;*/
+/*}*/
+/* Standaard badge (zoals voor partij en locatie) */
+.candidate-badge {
+  display: inline-block;
+  background-color: #f0f4ff; /* Lichte achtergrond */
+  color: #001b5e; /* Donkerblauwe tekst (matcht primaire kleur) */
+  border-radius: 12px;
+  padding: 2px 10px; /* Iets meer padding */
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-right: 6px;
+  margin-top: 4px;
+}
+
+/* Speciale stijl voor 'Man' */
+.candidate-badge.gender-m {
+  background-color: #e6f0ff; /* Lichtblauw */
+  color: #0056b3; /* Donkerder blauw */
+}
+
+/* Speciale stijl voor 'Vrouw' */
+.candidate-badge.gender-v {
+  background-color: #f3e8ff; /* Lichtpaars */
+  color: #5a189a; /* Donkerpaars */
+}
+
+.candidates-view-single label {
+  color: #ffffff;
+}
+
+

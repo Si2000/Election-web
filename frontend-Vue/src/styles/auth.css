@@ -1,0 +1,158 @@
+.auth-container {
+  max-width: 400px;
+  margin: 60px auto;
+  padding: 32px;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  text-align: left;
+}
+
+.auth-container h2 {
+  font-size: 1.5rem;
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.tabs button,
+.tabs a {
+  flex: 1;
+  padding: 10px 0;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.tabs .active {
+  background-color: #fff;
+  border: 2px solid #001b5e;
+  color: #001b5e;
+}
+
+.tabs .inactive {
+  background-color: #f5f6fa;
+  color: #333;
+}
+
+form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  width: 100%;
+  background-color: #001b5e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #002c9b;
+}
+
+.password-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+
+.links {
+  text-align: left; /* Zorgt dat hij rechts staat (optioneel) */
+  margin-top: -10px; /* Trekt het element 10 pixels omhoog */
+  margin-bottom: 20px; /* Zorgt voor ruimte onder de link (naar de knop toe) */
+}
+
+.links a {
+  font-size: 0.9rem;
+  color: #002c9b;
+  text-decoration: underline;
+}
+
+.password-input-wrapper input {
+  width: 100%;
+  padding-right: 40px;
+  margin-bottom: 0;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  user-select: none;
+  font-size: 1.2rem;
+  background: none;
+  border: none;
+}
+
+.password-group {
+  margin-bottom: 16px;
+}
+
+.input-error {
+  border-color: red !important;
+  background-color: #fff0f0;
+}
+
+.error-text {
+  color: #d9534f;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.eye-icon {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+
+.eye-img {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+}
+.status-message {
+  color: blue;
+  text-align: center;
+  padding: 1rem;
+}
+.status-message.success {
+  color: green;
+  font-weight: bold;
+}
+.error-message {
+  color: red;
+  font-weight: bold;
+}
+
+

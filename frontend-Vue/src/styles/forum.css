@@ -1,0 +1,102 @@
+.header-actions {
+  margin-top: 20px;
+}
+
+.btn-create {
+  display: inline-block;
+  background-color: #001b5e;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+.btn-create:hover {
+  background-color: #00308f;
+}
+
+.login-hint {
+  color: #666;
+  font-style: italic;
+}
+.login-hint a {
+  color: #001b5e;
+  font-weight: bold;
+}
+
+.forum-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+.forum-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.forum-header h1 {
+  color: #001b5e;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.topics-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.topic-card {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 20px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.topic-card:hover {
+  transform: translateY(-2px);
+  border-color: #001b5e;
+  box-shadow: 0 4px 12px rgba(0, 27, 94, 0.1);
+}
+
+.topic-title {
+  margin: 0 0 8px 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.topic-meta {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.arrow {
+  font-size: 1.5rem;
+  color: #001b5e;
+  font-weight: bold;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+  background: #f9f9f9;
+  border-radius: 12px;
+}
+
+.loading, .error {
+  text-align: center;
+  padding: 20px;
+  font-weight: 500;
+}
+.error { color: #dc3545; }
